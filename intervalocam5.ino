@@ -1,4 +1,4 @@
-// INTERVALOCAM4.ino
+// INTERVALOCAM5.ino
 
 #include <Wire.h>                       // I2C Library
 #include <LiquidCrystal_I2C.h>          // I2C LCD Library
