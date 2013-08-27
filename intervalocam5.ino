@@ -163,6 +163,9 @@ focuscheck();
 delay(1000);
       while (mode == 42){
         buttoncheck();
+        
+focuscheck();
+
 
   if (digitalRead(switchManual) == LOW) {     // check switch
     lcd.clear();
@@ -211,7 +214,8 @@ mode = 100;
     focuscheck();
       lcd.print("Interval in min");
       while (mode == 43){
-        lcd.setCursor(0,1);
+    focuscheck();
+    lcd.setCursor(0,1);
         lcd.print("      min");
         lcd.setCursor(0,1);
              lcd.print((interval/60000));
@@ -219,6 +223,7 @@ mode = 100;
         //      lcd.print(interval%(3600));
         delay(70);
         buttoncheck();
+
 
         if (buttonRight_state==true) {
           interval = interval+30000;
@@ -244,6 +249,9 @@ mode = 100;
     focuscheck();
       lcd.print("Interval in sec");
       while (mode == 0){
+          
+focuscheck();
+
         lcd.setCursor(0,1);
         lcd.print("      sec");
         lcd.setCursor(0,1);
@@ -281,7 +289,8 @@ focuscheck();
 
       // min mode   
       if (checkmode == 43){
-        lcd.print((interval/60000));
+    focuscheck();
+    lcd.print((interval/60000));
         lcd.setCursor(5,1);
         lcd.print("min");
         //   lcd.print(".");
@@ -293,7 +302,8 @@ focuscheck();
 
       // sec mode   
       if (checkmode == 0){
-        lcd.print((interval/1000));
+    focuscheck();
+    lcd.print((interval/1000));
         lcd.print(".");
         lcd.print(interval%1000); 
         lcd.setCursor(6,1);
@@ -338,6 +348,8 @@ focuscheck();
       lcd.print("Amount of Shots");
       while (mode == 3){
 
+focuscheck();
+
         lcd.setCursor(0,1);
         lcd.print("     Shots");
         lcd.setCursor(0,1);
@@ -375,7 +387,8 @@ focuscheck();
       delay(50);
 
       while ( mode == 4){
-        buttoncheck();
+    focuscheck();
+    buttoncheck();
 
         if (buttonRight_state == true || buttonLeft_state == true){
           mode = 3;
@@ -405,7 +418,8 @@ focuscheck();
       delay(50);
 
       while ( mode == 5){
-        buttoncheck();
+    focuscheck();
+    buttoncheck();
         if (buttonSet_state == true){
           lcd.clear();      
           lcd.print("Start in :");    
@@ -476,7 +490,8 @@ focuscheck();
         delay(50);
 
         while (mode == 7){
-          buttoncheck();
+     focuscheck();
+      buttoncheck();
 
           if (buttonSet_state == true){
             lcd.clear();
